@@ -119,6 +119,11 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    /*
+     对于UITableViewCell的contentView中的一些默认的视图不会随着frame的改变而自动改变，
+     所以需要进行位置的调整，这里只对textLabel的位置进行了调整，其他若使用，也许调整，
+     但是不建议使用。
+     */
     for (UIView *subView in [self.contentView subviews]) {
         if ([subView class] == NSClassFromString(@"UITableViewLabel")) {
             subView.frame = CGRectMake(0, 0, self.bounds.size.height, self.bounds.size.width);
