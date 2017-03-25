@@ -1,2 +1,2 @@
-# HorisontalTableView
+# HorizontalTableView
 table view of horizontal
